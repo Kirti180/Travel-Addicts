@@ -1,0 +1,187 @@
+#nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.image{
+    display: flex;
+
+    
+}
+/* body{
+    font;
+} */
+.image img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+image h1{
+    font-size: 30px;
+}
+button{
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: 1px solid whitesmoke;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.sign{
+    background-color: rgb(246, 85, 85);
+    color: wheat;
+    padding-top: 5px;
+    padding-bottom: 4px;
+}
+.sign:hover{
+    color: aliceblue;
+}
+.button button:hover{
+    background-color: rgb(201, 199, 199);
+    
+}
+
+#nav2{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    font-size: 22px;
+}
+.nav2{
+    display: flex;
+    justify-content: space-between;
+    height: 70%;
+    justify-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    
+}
+.nav2 div{
+    margin-top: 17px;
+}
+.nav2:hover{
+    background-color: black;
+    color: white;
+}
+.main{
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+}
+.main img{
+    width: 100%;
+    height: 350px;
+}
+
+
+.searchTerm {
+  width: 100%;
+  border: 2px solid white;
+  
+  padding: 15px;
+  height: 20px;
+  border-radius: 50px;
+  /* outline: none; */
+
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+    display: flex;
+  width: 50%;
+  height: 100px;
+  position: absolute;
+  top: 70%;
+  left: 25%;
+  /* transform: translate(-50%, -50%);  */
+}
+footer{
+    background-color: rgb(249, 231, 209);
+    padding-top: 20px;
+}
+.footer{
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+    justify-content: center;
+}
+footer img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+
+}
+.foot{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+.small{
+    font-size: 15px;
+}
+footer p{
+    margin-left: 1px;
+}
+
+#mum{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    /* width: 80%; */
+}
+#newyear{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    /* width: 80%; */
+}
+#explore{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+    /* width: 80%; */
+}
+#holiday{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:10px;
+    /* width: 80%; */
+}
+#carouselDiv{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carouselDiv:hover{
+    cursor: pointer;
+}
+
+#carouselDiv>button{
+    position: absolute;
+    background: none;
+    border: none;
+    width: 40px;
+    font-size: 40px;
+    height: 100%;
+}
+#carouselDiv>button:nth-child(1){
+    left: 20px;
+}
+#carouselDiv>button:nth-child(3){
+    right: 20px;
+}
+#carouselDiv>button:hover{
+    color: white;
+}
