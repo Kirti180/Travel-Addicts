@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+  </head>
+  <style>
+    #signin{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        width: 50%;
+        height: 300px;
+        padding-top: 5%;
+        background-image: url("images/saint-elias-mountains-1280x720-kaskawulsh-glacier-kluane-national-23930.jpg");
+  opacity: 0.5;
+    }
+    #form{
+       
+        margin-top: 50px;
+    }
+    .nav{
+        display: flex;
+        font-size: 30px;
+        justify-content: space-evenly;
+    }
+  </style>
+  <body>
+    <center>
+    <div class="nav"><div><a href="./login.html">Login</a></div>
+    <div><a href="./signin.html">Signin</a></div>
+    <div><a href="./home.html">Home</a></div>
+      
+      
+    </div><br><br><br>
+    <div id="signin">
+      <h1 id="heading">Please Enter Your Details</h1>
+      <form id="form">
+        User email:
+        <input type="email" id="email" placeholder="enter your email"/><br><br><br>
+        User password
+        <input type="password" id="password" placeholder="enter your password"/><br><br><br>
+        <input type="submit" value="Submit" ><br><br><br>
+      </form>
+    </center>
+    </div>
+  </body>
+  <script>
+let form=document.getElementById("form")
+let heading=document.querySelector("h1")
+
+
+let arr=JSON.parse(localStorage.getItem("account-data"))||[];
+form.addEventListener("submit",(event)=>{
+  event.preventDefault();
+  let details={
+  email:form.email.value,
+  password:form.password.value,
+}
+arr.forEach((element,index) => {
+  if(element.email===details.email && element.password===details.password){
+    heading.innerText="Log in Successful"
+    
+  }
+  else{
+    heading.innerText="Wrong Credentials"
+  }
+});
+
+})
+
+
+  </script>
+</html>
