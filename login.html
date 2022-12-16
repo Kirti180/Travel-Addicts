@@ -7,41 +7,67 @@
     <title>Login page</title>
   </head>
   <style>
-    #signin{
+       #signin{
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         width: 50%;
-        height: 300px;
-        padding-top: 5%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        /* padding-top: 5%;
+        padding-bottom: 8%; */
+        
         background-image: url("images/saint-elias-mountains-1280x720-kaskawulsh-glacier-kluane-national-23930.jpg");
-  opacity: 0.5;
+
     }
     #form{
-       
+
         margin-top: 50px;
+    }
+    .new{
+      background-color: rgba(255, 255, 255, 0.5);
+      height: 100%;
+      width:100% ;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding-top: 10%;
+      
     }
     .nav{
         display: flex;
         font-size: 30px;
         justify-content: space-evenly;
     }
+    .nav button{
+      height: 40px;
+      width: 80px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    .nav button:hover{
+      background-color: green;
+    }
   </style>
   <body>
     <center>
-    <div class="nav"><div><a href="./login.html">Login</a></div>
-    <div><a href="./signin.html">Signin</a></div>
-    <div><a href="./home.html">Home</a></div>
+    <div class="nav"><div><a href="./login.html"><button>Login</button> </a></div>
+    <div><a href="./signin.html"><button>Signin</button> </a></div>
+    
       
       
     </div><br><br><br>
     <div id="signin">
+      <div class="new">
       <h1 id="heading">Please Enter Your Details</h1>
       <form id="form">
         User email:
         <input type="email" id="email" placeholder="enter your email"/><br><br><br>
         User password
         <input type="password" id="password" placeholder="enter your password"/><br><br><br>
-        <input type="submit" value="Submit" ><br><br><br>
+        <input type="submit" value="Submit" style="height: 30px; width: 80px; border-radius: 10px; border: 1px solid grey; font-size: 15px; background-color: black; color: aliceblue; font-weight: bold;" ><br><br><br>
       </form>
+      </div>
     </center>
     </div>
   </body>
@@ -60,6 +86,7 @@ form.addEventListener("submit",(event)=>{
 arr.forEach((element,index) => {
   if(element.email===details.email && element.password===details.password){
     heading.innerText="Log in Successful"
+    window.location.href="./home.html"
     
   }
   else{

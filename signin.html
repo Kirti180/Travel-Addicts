@@ -40,6 +40,15 @@
         font-size: 30px;
         justify-content: space-evenly;
     }
+    .nav button{
+      height: 40px;
+      width: 80px;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+    .nav button:hover{
+      background-color: green;
+    }
   
       /* Write all necessery css here  */
   </style>
@@ -48,8 +57,8 @@
 <body>
   <center>
   <div class="nav">
-    <a href="./login.html">Login</a>
-    <a href="./signin.html">Signin</a>
+    <a href="./login.html"><button>Login</button> </a>
+    <a href="./signin.html"><button>Signin  </button> </a>
   </div><br><br><br>
   <div id="signup">
     <div class="new">
@@ -61,7 +70,7 @@
       <input type="email" id="email" placeholder="enter your email"><br><br><br>
       User password:
       <input type="password"  id="password" placeholder="enter your password"><br><br><br>
-      <input type="submit" value="Submit" onclick="showme()" />
+      <input type="submit" value="Submit" onclick="showme()"  style="height: 30px; width: 80px; border-radius: 10px; border: 1px solid grey; font-size: 15px; background-color: black; color: aliceblue; font-weight: bold;" />
     </form>
   </div>
   </center>
