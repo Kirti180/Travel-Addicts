@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/pune.css">
+    <title>PUNE</title>
+</head>
+<body>
+    <div id="container">
+        <div class="main">
+            <div> <h1>Hotels  In  Pune</h1><br><br><br>
+            </h1></div>
+           
+        </div><br><br>
+        <div id="append"></div>
+        <!-- append here  -->
+    </div>
+</body>
+<Script>
+    let contain=document.getElementById("append")
+    
+    let arr=[
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/06/3d/42/2d/the-resort.jpg",
+name:"Name : Victor Palace",
+price:"Price : 1020 per day",
+address:"Address : pune,market yard",
+phone:"Phone : 1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/22/fa/ef/c2/renaissance-mumbai-convention.jpg",
+name:"Name :Hello Cutie ",
+price:"1220 per day",
+address:"pune,market yard",
+phone:"52151151151",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/1d/10/99/d0/swimming-pool.jpg",
+name:"Name :Yatri Niwas",
+price:"1520 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/1d/02/e3/1c/goldfinch-mumbai.jpg",
+name:"Name :Victor Palace",
+price:"1020 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/21/dd/46/00/infinity-pool.jpg",
+name:"Victor Palace",
+price:"1020 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/26/d8/de/83/hlttaj-lands-end-exterior.jpg",
+name:"Hello Cutie ",
+price:"1220 per day",
+address:"pune,market yard",
+phone:"52151151151",
+book:"Book Now"
+        },
+       {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/14/85/f5/af/lobby.jpg",
+name:"Yatri Niwas",
+price:"1520 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/9d/40/93/main-lobby--v16044171.jpg",
+name:"Rajat Palace",
+price:"1020 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/0d/97/90/1b/the-fern-goregaon.jpg",
+name:"Victor Palace",
+price:"1020 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/1c/d3/b2/4f/exterior-view.jpg",
+name:"Hello Cutie ",
+price:"1220 per day",
+address:"pune,market yard",
+phone:"52151151151",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/9d/40/93/main-lobby--v16044171.jpg",
+name:"Yatri Niwas",
+price:"1520 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+        },
+        {
+image:"https://media-cdn.tripadvisor.com/media/photo-s/26/d8/de/83/hlttaj-lands-end-exterior.jpg",
+name:"Victor Palace",
+price:"1020 per day",
+address:"pune,market yard",
+phone:"1201204520",
+book:"Book Now"
+
+        },
+    ]
+    display(arr)
+    function display(arr){
+        contain.innerHTML=null;
+        arr.forEach((element) => {
+            let card=document.createElement("div")
+            let image=document.createElement("img")
+            image.setAttribute("src",element.image)
+            let name=document.createElement("h1")
+            name.innerText=element.name;
+            let price=document.createElement("h3")
+            price.innerText=element.price;
+            let address=document.createElement("p")
+            address.innerText=element.address;
+            let phone=document.createElement("h2")
+            phone.innerText=element.phone;
+            let book=document.createElement("button")
+            book.innerText=element.book
+
+            card.append(image,name,price,address,phone,book)
+            contain.append(card)
+
+        });
+        
+    }
+</Script>
+</html>
