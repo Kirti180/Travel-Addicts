@@ -1,8 +1,8 @@
 #nav{
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
     
     
 }
@@ -255,16 +255,84 @@ footer p{
     color: white;
 }
 
+
 .dropdown-content a:hover {background-color: #ddd;}
 
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover  {background-color: black; color: #ddd;}
+#carouseldiv{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carouseldiv:hover{
+    cursor: pointer;
+}
+
+#carouseldiv>button{
+    position: absolute;
+    background: none;
+    border: none;
+    width: 40px;
+    font-size: 40px;
+    height: 100%;
+}
+#carouseldiv>button:nth-child(1){
+    left: 20px;
+}
+#carouseldiv>button:nth-child(3){
+    right: 20px;
+}
+#carouseldiv>button:hover{
+    color: white;
+}
+
 
 /* .dropdown {
     position: relative;
     display: inline-block;
   } */
+  #carousel{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carousel{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carousel:hover{
+    cursor: pointer;
+}
+
+#carousel>button{
+    position: absolute;
+    background: none;
+    border: none;
+    width: 40px;
+    font-size: 40px;
+    height: 100%;
+}
+#carousel>button:nth-child(1){
+    left: 20px;
+}
+#carousel>button:nth-child(3){
+    right: 20px;
+}
+#carousel>button:hover{
+    color: white;
+}:hover{
+    cursor: pointer;
+}
+
   
   .dropdown-content {
     margin-top: 3%;
@@ -275,6 +343,45 @@ footer p{
     /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
     /* z-index: 1; */
   }
+
+  #carous{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carous{
+    z-index: 0;
+    /* width: 50%; */
+    position:relative;
+    display: flex;
+    align-items: center;
+}
+#carous:hover{
+    cursor: pointer;
+}
+
+#carous>button{
+    position: absolute;
+    background: none;
+    border: none;
+    width: 40px;
+    font-size: 40px;
+    height: 100%;
+}
+#carous>button:nth-child(1){
+    left: 20px;
+}
+#carous>button:nth-child(3){
+    right: 20px;
+}
+#carous>button:hover{
+    color: white;
+}:hover{
+    cursor: pointer;
+}
+
   
   .dropdown-content a {
     color: black;

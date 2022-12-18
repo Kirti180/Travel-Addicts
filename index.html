@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOME</title>
-    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -88,18 +88,18 @@
                     <path d="M16 7a1 1 0 0 1-1 1v3.5c0 .818-.393 1.544-1 2v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5V14H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2a2.496 2.496 0 0 1-1-2V8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1V2.64C1 1.452 1.845.408 3.064.268A43.608 43.608 0 0 1 8 0c2.1 0 3.792.136 4.936.268C14.155.408 15 1.452 15 2.64V4a1 1 0 0 1 1 1v2ZM3.552 3.22A43.306 43.306 0 0 1 8 3c1.837 0 3.353.107 4.448.22a.5.5 0 0 0 .104-.994A44.304 44.304 0 0 0 8 2c-1.876 0-3.426.109-4.552.226a.5.5 0 1 0 .104.994ZM8 4c-1.876 0-3.426.109-4.552.226A.5.5 0 0 0 3 4.723v3.554a.5.5 0 0 0 .448.497C4.574 8.891 6.124 9 8 9c1.876 0 3.426-.109 4.552-.226A.5.5 0 0 0 13 8.277V4.723a.5.5 0 0 0-.448-.497A44.304 44.304 0 0 0 8 4Zm-3 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm8 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-7 0a1 1 0 0 0 1 1h2a1 1 0 1 0 0-2H7a1 1 0 0 0-1 1Z"/>
                   </svg></div></div>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Pune</a>
+              <a href="#">Kolhapur</a>
+              <a href="#"></a>
             </div>
           </div>
           <div class="dropdown">
             <div class="dropbtn"><h5>More</h5>
                 <div><b>...</b></div></div>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Pune</a>
+              <a href="#">Kolhapur</a>
+              <a href="#"></a>
             </div>
           </div>
 
@@ -136,22 +136,34 @@
         <h2>Ring in the new year</h2>
         <h5>New Year's Eve spots to welcome 2023</h5>
     </div>
+    <div id="carouseldiv">
+        <button id="leftt"><</button>
     <div id="newyear">
         <!-- append here -->
+    </div>
+    <button id="rightt">></button>
     </div>
     <div>
         <h2>More to explore</h2>
         <h5></h5>
     </div>
+    <div id="carousel">
+        <button id="le"><</button>
     <div id="explore">
         <!-- append here -->
+    </div>
+    <button id="ri">></button>
     </div>
     <div>
         <h2>Top destinations for your next holiday</h2>
         <h5>Here's where your fellow travellers are headed</h5>
     </div>
+    <div id="carous">
+        <button id="l"><</button>
     <div id="holiday">
         <!-- append here -->
+    </div>
+    <button id="r">></button>
     </div><br><br><br></div>
     <footer>
         <div class="footer">
@@ -404,6 +416,24 @@ leftBtn.addEventListener('click',function(){
         });
         }
 // displaynew(newyear)
+let leftbtn = document.getElementById('leftt')
+let rightbtn = document.getElementById('rightt')
+let indexx = 0
+rightbtn.addEventListener('click',function(){
+    indexx++
+    if(indexx==newyear.length){
+        indexx=0
+    }
+    displaynew(newyear[indexx])
+})
+leftbtn.addEventListener('click',function(){
+    indexx--
+    if(indexx<0){
+        indexx =newyear.length-1
+    }
+    displaynew(newyear[indexx])
+})
+
         function displaynew(newyear){
             year.innerHTML=null;
             newyear.forEach((element) => {
@@ -420,6 +450,23 @@ leftBtn.addEventListener('click',function(){
             year.append(cardnew)
         });
         }
+        let leftbt = document.getElementById('le')
+let rightbt = document.getElementById('ri')
+let inde = 0
+rightbt.addEventListener('click',function(){
+    inde++
+    if(inde==explore.length){
+        inde=0
+    }
+    displayexp(explore[inde])
+})
+leftbtn.addEventListener('click',function(){
+    inde--
+    if(inde<0){
+        inde =explore.length-1
+    }
+    displayexp(explore[inde])
+})
 
         function displayexp(explore){
             exp.innerHTML=null;
@@ -436,7 +483,23 @@ leftBtn.addEventListener('click',function(){
             exp.append(cardexp)
         });
         }
-       
+let le = document.getElementById('l')
+let ri= document.getElementById('r')
+let i = 0
+ri.addEventListener('click',function(){
+    i++
+    if(i==holiday.length){
+        i=0
+    }
+    displayholi(holiday[i])
+})
+le.addEventListener('click',function(){
+    i--
+    if(i<0){
+        i =holiday.length-1
+    }
+    displayholi(holiday[i])
+})
 
         function displayholi(holiday){
             holi.innerHTML=null;
