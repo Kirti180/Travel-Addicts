@@ -12,7 +12,7 @@
   padding-right: 10%; */
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(6,1fr);
+  /* grid-template-columns: repeat(6,1fr) */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -66,13 +66,14 @@ padding-top: 12%;
     display: grid;
     grid-template-columns: repeat(3,300px);
     gap: 5%;
+    margin-bottom: 8%;
    
 }
 #nav2{
     
     display: grid;
     gap: 5px;
-    grid-template-columns: repeat(6,1fr);
+    /* grid-template-columns: repeat(6,1fr); */
  }
 #append img{
     width: 100%;
@@ -146,4 +147,37 @@ border: 1px solid white;
   }
   button{
     border: 1px solid white;
+  }
+  #stt{
+    display: grid;
+     grid-template-columns: repeat(3,1fr);
+     padding-left: 15%; 
+     padding-right: 10%;
+  }
+  @media all and (min-width: 451px) and (max-width: 750px) {
+    #nav2{
+      grid-template-columns: repeat(3,1fr);
+     
+    }
+    #append{
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+    #stt{
+      grid-template-columns: repeat(2,1fr);
+    }
+    
+  }
+  /* Small screens */
+  @media all and (min-width: 100px) and (max-width: 450px) {
+    #nav2{
+      grid-template-columns: repeat(1,1fr);
+     
+    }
+    #append{
+      grid-template-columns: repeat(1,1fr);
+    }
+    #stt{
+      grid-template-columns: repeat(1,1fr);
+    }
   }
